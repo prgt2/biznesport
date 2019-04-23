@@ -348,11 +348,29 @@ p {
 .slides {
     width: 100%;
     height: 90%;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.slides > * {
+    position: absolute;
+    font-size: 22px;
+}
+.slide-active {
+    opacity: 1;
+    z-index: 1;
+}
+.slide-inactive {
+    position: absolute;
+    opacity: 0;
+    z-index: 0;
+    transition: 0.4s all;
 }
 .dots-list {
     display: flex;
-    justify-items: center;
+    justify-content: center;
+    padding: 0;
 }
 .dot-item {
   cursor: pointer;
@@ -372,3 +390,118 @@ p {
     background: white;
     height: 800px;
 }
+
+
+
+
+
+
+#hexGrid {
+    display: grid;
+    grid-column-gap:20px;
+    grid-template-columns: repeat(10,80px);
+    width: 100%;
+    margin: 0 20px;
+    padding-top: 20px;
+    list-style-type: none;
+    overflow:hidden;
+  }
+  
+  .hex {
+    grid-column-end: span 2;
+    position: relative;
+    visibility:hidden;
+  }
+  .hex::after{
+    content:'';
+    display:block;
+    padding-bottom:86.7%;  /* =  100 / tan(60) * 1.5 */
+    margin-bottom: 11.83%;
+  
+  }
+  .hexIn{
+    position: absolute;
+    width:100%;
+    padding-bottom: 115.470%; /* =  width / sin(60) */
+    overflow: hidden;
+    visibility: hidden;
+    -webkit-transform: rotate3d(0,0,1,-60deg) skewY(30deg);
+        -ms-transform: rotate3d(0,0,1,-60deg) skewY(30deg);
+            transform: rotate3d(0,0,1,-60deg) skewY(30deg);
+  }
+  .hexIn * {
+    position: absolute;
+    visibility: visible;
+  }
+  
+  .hexLink {    /*Na razie w <div>ie .hexIn musi być <a> albo <div> .hexLink, może da się to scalić */
+    display:block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-transform: skewY(-30deg) rotate3d(0,0,1,60deg);
+        -ms-transform: skewY(-30deg) rotate3d(0,0,1,60deg);
+            transform: skewY(-30deg) rotate3d(0,0,1,60deg);
+  }
+  
+  /*** HEX CONTENT **********************************************************************/
+  .hex img {
+    left: -100%;
+    right: -100%;
+    width: auto;
+    height: 100%;
+    margin: 0 auto;
+    -webkit-transform: rotate3d(0,0,0,0deg);
+        -ms-transform: rotate3d(0,0,0,0deg);
+            transform: rotate3d(0,0,0,0deg);
+  }
+  
+  
+  /*** HEXAGON SIZING AND EVEN ROW INDENTATION *****************************************************************/
+  
+  @media (min-width:601px) { /* <- 5-4  hexagons per row */
+    #hexGrid{
+      padding-bottom: 4.4%;
+    }
+    .hex:nth-child(9n+1){ /* first hexagon of even rows */
+      grid-column-start: 2;
+    }
+  }
+  /*
+  @media (max-width: 900) and (min-width:601px) { / <- 4-3  hexagons per row /
+    #hexGrid{
+      grid-template-columns: repeat(8,1fr);
+      padding-bottom: 5.5%;
+    }
+    .hex:nth-child(7n+1){
+      grid-column-start: 2;
+    }
+  } */
+  
+  @media (max-width: 600px) and (min-width:301px) { /* <- 3-2  hexagons per row */
+    #hexGrid{
+      grid-template-columns: repeat(6,1fr);
+      padding-bottom: 7.4%;
+    }
+    .hex:nth-child(5n+1){ /* first hexagon of ODD rows */
+      grid-column-start: 2;
+    }
+  }
+  
+  @media (max-width: 400px) { /* <- 2-1  hexagons per row */
+  #hexGrid{
+    grid-template-columns: repeat(4,1fr);
+    padding-bottom: 11.2%;
+    grid-gap:5px;
+  }
+  .hex:nth-child(3n+1){ /* first hexagon of ODD rows */
+    grid-column-start: 2;
+  }
+  }
+  /* 
+  @media (max-width: 300px) {
+    #hexGrid {
+        font-size: 13px;
+    }
+  }*/
+  

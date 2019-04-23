@@ -33,5 +33,15 @@ function script() {
             $(this).toggleClass('dot-active')
         }
         $(this).siblings().removeClass('dot-active')
+        if ($(this).attr('id') === 'dot1') {
+            $('#slide1').attr('class', 'slide-active')
+            $('#slide1').siblings().attr('class', 'slide-inactive')
+        } else if ($(this).attr('id') === 'dot2') {
+            $('#slide2').attr('class', 'slide-active')
+            $('#slide2').siblings().attr('class', 'slide-inactive')
+        } else if ($(this).attr('id') === 'dot3') {
+            $('#slide3').attr('class', 'slide-active')
+            $('#slide3').siblings().attr('class', 'slide-inactive')
+        }
     })
 }
