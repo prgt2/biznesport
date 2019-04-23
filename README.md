@@ -1,0 +1,1 @@
+Strona jest odwzorowaniem dostarczonej grafiki i tak jak ona ma szerokość 1020px. Wymiary są zakodowane na sztywno, dlatego stronę należy oglądać na większym wyświetlaczu. Na responsywność niestety nie starczyło mi czasu, cały czas uczę się tego zagadnienia. Kodu nie minifikowałem, żeby można było go wygodnie przejrzeć i ocenić

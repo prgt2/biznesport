@@ -1,3 +1,7 @@
+html {
+    display: flex;
+    justify-content: center;
+}
 body {
     font-family: 'Lato', sans-serif;
     color: white;
@@ -24,21 +28,16 @@ a:hover {
     justify-content: center;
     align-items: center;
     max-height: 63px;
-
 }
 .menu-items li {
     padding: 16px 25px;
-    color: #ffffff;
     font-size: 10px;
     font-weight: 700;
     text-transform: uppercase;
     line-height: 1.6em;
     display: inline-block;
-    padding-top: 32px;
-    padding-bottom: 23px;
 }
 .menu-items {
-    padding: o;
     margin: 0;
     list-style: none;
     padding-left: 0;
@@ -47,18 +46,15 @@ a:hover {
     align-items: center;
 }
 #notch {
-    padding: 0;
-    
+    padding: 0;  
 }
 .bio {
-    width: 1020px;
     height: 341px;
     background-color: #2eb398;
     display: grid;
     justify-items: center;
     grid-template-columns: 70px 180px 19px 611px auto;
     grid-template-rows: 250px auto;
-
 }
 .container-photo {
     grid-column-start: 2;
@@ -82,26 +78,15 @@ a:hover {
     grid-row-end: 3;
     justify-self: end;
     display: inline;
-
 }
-.bio-header > p {
-    height: auto;
-}
-
 .bio-text {
-    height: auto;
-    color: #d7fcf5;
-    font-family: 'Lato', sans-serif;
     font-size: 12px;
     font-weight: 400;
     line-height: 21.56px;
     margin: 0;
 }
 .bio-header .h3 {
-    width: auto;
     height: 22px;
-    color: #d7fcf5;
-    font-family: 'Maven Pro', sans-serif;
     font-size: 30px;
     font-weight: 400;
     line-height: 4.56px;
@@ -109,18 +94,14 @@ a:hover {
     margin-top: 0;
 }
 .bio-header .h4 {
-    width: auto;
     height: 17px;
     color: #20816d;
-    font-family: 'Maven Pro', sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 21.56px;
     margin: 0;
 }
-
 .contact-form {
-    width: 1020px;
     height: 564px;
     display: grid;
     grid-template-columns: 700px auto;
@@ -140,7 +121,6 @@ a:hover {
 .form-header h3 {
     width: auto;
     height: 22px;
-    color: #e0e0e0;
     font-family: 'Maven Pro', sans-serif;
     font-size: 30px;
     font-weight: 400;
@@ -150,7 +130,6 @@ a:hover {
 .form-header h4 {
     width: auto;
     height: 17px;
-    color: #e0e0e0;;
     font-family: 'Maven Pro', sans-serif;
     font-size: 18px;
     font-weight: 400;
@@ -173,24 +152,21 @@ a:hover {
 input {
     width: 100%;
     height: 80%;
-    background-color: #454545;
-    border: #454545;
     padding-left: 15px;
     padding-right: 15px;
 }
 textarea {
     height: 120%;
     width: 100%;
-    background-color: #454545;
-    border: #454545;
     padding: 15px;
 }
 input, select, textarea {
-    color: #e0e0e0;
     font-family: 'Lato', sans-serif;
     font-size: 12px;
     font-weight: 400;
     box-sizing:border-box;
+    background-color: #454545;
+    border: none;
 }
 ::placeholder {
     color: #e0e0e0;
@@ -251,7 +227,6 @@ input, select, textarea {
     grid-row-end: 3;
     margin-right: 10%;
     justify-self: stretch;
-    font-family: Lato;
     font-size: 12px;
     font-weight: 400;
     line-height: 21.56px;
@@ -271,7 +246,6 @@ p {
     grid-row-start: 3;
     grid-row-end: 4;
     margin-right: 10%; 
-    font-family: Lato;
     font-size: 12px;
     font-weight: 400;
     line-height: 21.56px;
@@ -325,7 +299,6 @@ p {
 }
 .container-footer p {
     color: #454545;
-    font-family: "Maven Pro Regular", sans-serif;
     font-size: 12px;
     font-weight: 400;
     line-height: 6.32px;
@@ -334,7 +307,6 @@ p {
 }
 .page-footer {
     background: #222222;
-    width: 1020px;
     height: 43px;
     display: flex;
     align-items: center;
@@ -386,16 +358,9 @@ p {
   background-color: #8b8784;
 }
 .tiles {
-    color: black;
-    background: white;
     height: 800px;
+    background: white;
 }
-
-
-
-
-
-
 #hexGrid {
     display: grid;
     grid-column-gap:20px;
@@ -405,8 +370,7 @@ p {
     padding-top: 20px;
     list-style-type: none;
     overflow:hidden;
-  }
-  
+}  
   .hex {
     grid-column-end: span 2;
     position: relative;
@@ -417,7 +381,6 @@ p {
     display:block;
     padding-bottom:86.7%;  /* =  100 / tan(60) * 1.5 */
     margin-bottom: 11.83%;
-  
   }
   .hexIn{
     position: absolute;
@@ -433,7 +396,6 @@ p {
     position: absolute;
     visibility: visible;
   }
-  
   .hexLink {    /*Na razie w <div>ie .hexIn musi być <a> albo <div> .hexLink, może da się to scalić */
     display:block;
     width: 100%;
@@ -443,7 +405,6 @@ p {
         -ms-transform: skewY(-30deg) rotate3d(0,0,1,60deg);
             transform: skewY(-30deg) rotate3d(0,0,1,60deg);
   }
-  
   /*** HEX CONTENT **********************************************************************/
   .hex img {
     left: -100%;
@@ -455,11 +416,6 @@ p {
         -ms-transform: rotate3d(0,0,0,0deg);
             transform: rotate3d(0,0,0,0deg);
   }
-  
-  
-  /*** HEXAGON SIZING AND EVEN ROW INDENTATION *****************************************************************/
-  
-  @media (min-width:601px) { /* <- 5-4  hexagons per row */
     #hexGrid{
       padding-bottom: 4.4%;
     }
@@ -467,43 +423,6 @@ p {
       grid-column-start: 2;
     }
   }
-  /*
-  @media (max-width: 900) and (min-width:601px) { / <- 4-3  hexagons per row /
-    #hexGrid{
-      grid-template-columns: repeat(8,1fr);
-      padding-bottom: 5.5%;
-    }
-    .hex:nth-child(7n+1){
-      grid-column-start: 2;
-    }
-  } */
-  
-  @media (max-width: 600px) and (min-width:301px) { /* <- 3-2  hexagons per row */
-    #hexGrid{
-      grid-template-columns: repeat(6,1fr);
-      padding-bottom: 7.4%;
-    }
-    .hex:nth-child(5n+1){ /* first hexagon of ODD rows */
-      grid-column-start: 2;
-    }
-  }
-  
-  @media (max-width: 400px) { /* <- 2-1  hexagons per row */
-  #hexGrid{
-    grid-template-columns: repeat(4,1fr);
-    padding-bottom: 11.2%;
-    grid-gap:5px;
-  }
-  .hex:nth-child(3n+1){ /* first hexagon of ODD rows */
-    grid-column-start: 2;
-  }
-  }
-  /* 
-  @media (max-width: 300px) {
-    #hexGrid {
-        font-size: 13px;
-    }
-  }*/
   #hexGrid {
       width: 1020px;
   }

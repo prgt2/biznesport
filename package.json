@@ -1,0 +1,22 @@
+{
+  "name": "zadanie_biznesport",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prgt2/biznesport.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prgt2/biznesport/issues"
+  },
+  "homepage": "https://github.com/prgt2/biznesport#readme",
+  "dependencies": {
+    "gulp": "^4.0.1"
+  }
+}
