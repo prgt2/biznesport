@@ -324,6 +324,7 @@ p {
     justify-content: center;
     align-items: center;
     position: relative;
+    color: black;
 }
 .slides > * {
     position: absolute;
